@@ -36,3 +36,6 @@ export { default as InputController } from './controllers/input_controller'
 export { default as PopoverController } from './controllers/popover_controller'
 export { default as TabsController } from './controllers/tabs_controller'
 export { default as ToggleThemeController } from './controllers/toggle_theme_controller'
+
+// Export application
+export { application }
