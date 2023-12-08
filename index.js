@@ -7,6 +7,7 @@ import AlertDialogController from './controllers/alert_dialog_controller'
 import CalendarController from './controllers/calendar_controller'
 import ClipboardController from './controllers/clipboard_controller'
 import CollapsibleController from './controllers/collapsible_controller'
+import CommandController from './controllers/command_controller'
 import DialogController from './controllers/dialog_controller'
 import DismissableController from './controllers/dismissable_controller'
 import InputController from './controllers/input_controller'
@@ -20,6 +21,7 @@ application.register('alert-dialog', AlertDialogController)
 application.register('calendar', CalendarController)
 application.register('clipboard', ClipboardController)
 application.register('collapsible', CollapsibleController)
+application.register('command', CommandController)
 application.register('dialog', DialogController)
 application.register('dismissable', DismissableController)
 application.register('input', InputController)
@@ -33,6 +35,7 @@ export { default as AlertDialogController } from './controllers/alert_dialog_con
 export { default as CalendarController } from './controllers/calendar_controller'
 export { default as ClipboardController } from './controllers/clipboard_controller'
 export { default as CollapsibleController } from './controllers/collapsible_controller'
+export { default as CommandController } from './controllers/command_controller'
 export { default as DialogController } from './controllers/dialog_controller'
 export { default as DismissableController } from './controllers/dismissable_controller'
 export { default as InputController } from './controllers/input_controller'
