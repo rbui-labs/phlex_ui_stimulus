@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Stimulus controllers for PhlexUI Component Library",
   "main": "index.js",
+  "homepage": "https://phlexui.com",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
