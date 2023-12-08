@@ -4,6 +4,7 @@ import { application } from "./controllers/application"
 // Import all controller files
 import AccordionController from './controllers/accordion_controller'
 import AlertDialogController from './controllers/alert_dialog_controller'
+import CalendarController from './controllers/calendar_controller'
 import ClipboardController from './controllers/clipboard_controller'
 import CollapsibleController from './controllers/collapsible_controller'
 import DialogController from './controllers/dialog_controller'
@@ -16,6 +17,7 @@ import ToggleThemeController from './controllers/toggle_theme_controller'
 // Register all controllers
 application.register('accordion', AccordionController)
 application.register('alert-dialog', AlertDialogController)
+application.register('calendar', CalendarController)
 application.register('clipboard', ClipboardController)
 application.register('collapsible', CollapsibleController)
 application.register('dialog', DialogController)
@@ -28,6 +30,7 @@ application.register('toggle-theme', ToggleThemeController)
 // Export all controllers so user of npm package can lazy load controllers
 export { default as AccordionController } from './controllers/accordion_controller'
 export { default as AlertDialogController } from './controllers/alert_dialog_controller'
+export { default as CalendarController } from './controllers/calendar_controller'
 export { default as ClipboardController } from './controllers/clipboard_controller'
 export { default as CollapsibleController } from './controllers/collapsible_controller'
 export { default as DialogController } from './controllers/dialog_controller'
