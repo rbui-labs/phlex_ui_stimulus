@@ -14,6 +14,7 @@ import InputController from './controllers/input_controller'
 import PopoverController from './controllers/popover_controller'
 import TabsController from './controllers/tabs_controller'
 import ToggleThemeController from './controllers/toggle_theme_controller'
+import SheetController from './controllers/sheet_controller'
 
 // Register all controllers
 application.register('accordion', AccordionController)
@@ -28,6 +29,7 @@ application.register('input', InputController)
 application.register('popover', PopoverController)
 application.register('tabs', TabsController)
 application.register('toggle-theme', ToggleThemeController)
+application.register('sheet', SheetController)
 
 // Export all controllers so user of npm package can lazy load controllers
 export { default as AccordionController } from './controllers/accordion_controller'
@@ -42,6 +44,7 @@ export { default as InputController } from './controllers/input_controller'
 export { default as PopoverController } from './controllers/popover_controller'
 export { default as TabsController } from './controllers/tabs_controller'
 export { default as ToggleThemeController } from './controllers/toggle_theme_controller'
+export { default as SheetController } from './controllers/sheet_controller'
 
 // Export application
 export { application }
