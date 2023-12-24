@@ -12,7 +12,9 @@ import DialogController from './controllers/dialog_controller'
 import DismissableController from './controllers/dismissable_controller'
 import InputController from './controllers/input_controller'
 import PopoverController from './controllers/popover_controller'
+import SelectController from './controllers/select_controller'
 import TabsController from './controllers/tabs_controller'
+import TextController from './controllers/text_controller'
 import ToggleThemeController from './controllers/toggle_theme_controller'
 import SheetController from './controllers/sheet_controller'
 
@@ -27,7 +29,9 @@ application.register('dialog', DialogController)
 application.register('dismissable', DismissableController)
 application.register('input', InputController)
 application.register('popover', PopoverController)
+application.register('select', SelectController)
 application.register('tabs', TabsController)
+application.register('text', TextController)
 application.register('toggle-theme', ToggleThemeController)
 application.register('sheet', SheetController)
 
@@ -42,7 +46,9 @@ export { default as DialogController } from './controllers/dialog_controller'
 export { default as DismissableController } from './controllers/dismissable_controller'
 export { default as InputController } from './controllers/input_controller'
 export { default as PopoverController } from './controllers/popover_controller'
+export { default as SelectController } from './controllers/select_controller'
 export { default as TabsController } from './controllers/tabs_controller'
+export { default as TextController } from './controllers/text_controller'
 export { default as ToggleThemeController } from './controllers/toggle_theme_controller'
 export { default as SheetController } from './controllers/sheet_controller'
 

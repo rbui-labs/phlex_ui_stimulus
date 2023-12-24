@@ -7,6 +7,11 @@ export default class extends Controller {
     options: {
       type: Object,
       default: {},
+    },
+    // make content width of the trigger element (true/false)
+    matchWidth: {
+      type: Boolean,
+      default: false,
     }
   }
 
@@ -25,13 +30,14 @@ export default class extends Controller {
       content: this.contentTarget.innerHTML,
       allowHTML: true,
       interactive: true,
-      onShow: () => {
+      onShow: (instance) => {
+        this.matchWidthValue && this.setContentWidth(instance); // ensure content width matches trigger width
         this.addEventListeners();
       },
       onHide: () => {
         this.removeEventListeners();
         this.deselectAll();
-      }
+      },
     };
 
     const mergedOptions = { ...this.optionsValue, ...defaultOptions };
@@ -41,6 +47,14 @@ export default class extends Controller {
   destroyTippy() {
     if (this.tippy) {
       this.tippy.destroy();
+    }
+  }
+
+  setContentWidth(instance) {
+    // box-sizing: border-box
+    const content = instance.popper.querySelector('.tippy-content');
+    if (content) {
+      content.style.width = `${instance.reference.offsetWidth}px`;
     }
   }
 
@@ -74,6 +88,13 @@ export default class extends Controller {
   }
 
   updateSelectedItem(direction) {
+    // Check if any of the menuItemTargets have aria-selected="true" and set the selectedIndex to that index
+    this.menuItemTargets.forEach((item, index) => {
+      if (item.getAttribute('aria-selected') === 'true') {
+        this.selectedIndex = index;
+      }
+    });
+
     if (this.selectedIndex >= 0) {
       this.toggleAriaSelected(this.menuItemTargets[this.selectedIndex], false);
     }
