@@ -5,6 +5,7 @@ import { application } from "./controllers/application"
 import AccordionController from './controllers/accordion_controller'
 import AlertDialogController from './controllers/alert_dialog_controller'
 import CalendarController from './controllers/calendar_controller'
+import ChartController from './controllers/chart_controller'
 import ClipboardController from './controllers/clipboard_controller'
 import CollapsibleController from './controllers/collapsible_controller'
 import CommandController from './controllers/command_controller'
@@ -22,6 +23,7 @@ import SheetController from './controllers/sheet_controller'
 application.register('accordion', AccordionController)
 application.register('alert-dialog', AlertDialogController)
 application.register('calendar', CalendarController)
+application.register('chart', ChartController)
 application.register('clipboard', ClipboardController)
 application.register('collapsible', CollapsibleController)
 application.register('command', CommandController)
@@ -39,6 +41,7 @@ application.register('sheet', SheetController)
 export { default as AccordionController } from './controllers/accordion_controller'
 export { default as AlertDialogController } from './controllers/alert_dialog_controller'
 export { default as CalendarController } from './controllers/calendar_controller'
+export { default as ChartController } from './controllers/chart_controller'
 export { default as ClipboardController } from './controllers/clipboard_controller'
 export { default as CollapsibleController } from './controllers/collapsible_controller'
 export { default as CommandController } from './controllers/command_controller'
