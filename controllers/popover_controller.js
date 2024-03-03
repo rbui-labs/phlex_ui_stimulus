@@ -38,6 +38,16 @@ export default class extends Controller {
         this.removeEventListeners();
         this.deselectAll();
       },
+      popperOptions: {
+        modifiers: [
+          {
+            name: "offset",
+            options: {
+              offset: [0, 4]
+            },
+          },
+        ],
+      }
     };
 
     const mergedOptions = { ...this.optionsValue, ...defaultOptions };
