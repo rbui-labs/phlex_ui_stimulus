@@ -1,6 +1,6 @@
 {
   "name": "phlex_ui",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Stimulus controllers for PhlexUI Component Library",
   "main": "index.js",
   "homepage": "https://phlexui.com",
