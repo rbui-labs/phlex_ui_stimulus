@@ -1,16 +1,22 @@
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from "@hotwired/stimulus";
 
 // Connects to data-controller="alert-dialog"
 export default class extends Controller {
-  static targets = ["content"]
+  static targets = ["content"];
   static values = {
     open: {
       type: Boolean,
-      default: false
+      default: false,
+    },
+  };
+
+  connect() {
+    if (this.openValue) {
+      this.open();
     }
   }
 
-  open(e) {
-    document.body.insertAdjacentHTML('beforeend', this.contentTarget.innerHTML)
+  open() {
+    document.body.insertAdjacentHTML("beforeend", this.contentTarget.innerHTML);
   }
 }
