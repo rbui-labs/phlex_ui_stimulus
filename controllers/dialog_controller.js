@@ -10,6 +10,12 @@ export default class extends Controller {
     },
   }
 
+  connect() {
+    if (this.openValue) {
+      this.open()
+    }
+  }
+
   open(e) {
     e.preventDefault()
     document.body.insertAdjacentHTML('beforeend', this.contentTarget.innerHTML)
