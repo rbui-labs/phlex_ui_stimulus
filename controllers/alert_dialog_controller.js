@@ -18,5 +18,7 @@ export default class extends Controller {
 
   open() {
     document.body.insertAdjacentHTML("beforeend", this.contentTarget.innerHTML);
+    // prevent scroll on body
+    document.body.classList.add("overflow-hidden");
   }
 }
